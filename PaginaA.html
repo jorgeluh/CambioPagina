@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Página inicial</title>
+    </header>
+    <body>
+        <p><a href="PaginaB.html">Navegar a otra página</a></p>
+        <p><a href="#mismaPagina" class="sinAccion">No hacer nada, nos quedamos en la misma página</a></p>
+        <h1>Selección</h1>
+        <p>
+            <select id="opciones">
+                <option value="listado">Listado</option>
+                <option value="tarjeta">Tarjeta</option>
+            </select>
+        </p>
+        <p style="margin-top: 3000px;" id="mismaPagina">Otra parte dentro de la misma página.</p>
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+        <script>
+            $("a:not(.sinAccion)").click(function() {
+                alert(`Grabar "${$("#opciones").val()}" con AJAX sin esperar la respuesta.`);
+            });
+        </script>
+    </body>
+</html>
